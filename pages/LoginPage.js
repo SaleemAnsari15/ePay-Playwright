@@ -9,7 +9,7 @@ export class LoginPage {
     }
   
     async navigateToLogin() {
-      await this.page.goto('https://hcard-qa.awsepaydsi.ghx.com/content/login.aspx');
+      await this.page.goto('https://hcard-tabint.ghx.com/content/login.aspx');
     }
   
     async login(username, password) {
