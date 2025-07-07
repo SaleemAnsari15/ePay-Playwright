@@ -27,7 +27,12 @@ jobs:
 
       - name: Run Playwright tests with custom env file
         run: ENV_FILE="environments/.env.tabint" npx playwright test
+      
+      - name: Run Playwright tests with custom env file
+        run: ENV_FILE="environments/.env.dev" npx playwright test
 
+      - name: Run Playwright tests with custom env file
+        run: ENV_FILE="environments/.env.demo" npx playwright test
 
       - name: 🧪 Generate Allure Report
         run: |
