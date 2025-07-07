@@ -17,7 +17,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   reporter: [
-    ['html'],
+    // ['html'],
     ['list'],
     ['allure-playwright', { outputFolder: 'allure-results' }]
   ],
@@ -25,8 +25,8 @@ export default defineConfig({
 
 
   use: {
-    
     trace: 'on-first-retry',
+    screenshot: 'on'
   },
 
 

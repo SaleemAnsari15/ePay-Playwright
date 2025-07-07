@@ -1,0 +1,150 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- list:
+  - listitem:
+    - link "Home":
+      - /url: ../content/home.aspx
+  - listitem:
+    - link "Dashboard":
+      - /url: ../content/dashboardReport.aspx
+  - listitem:
+    - link "Invoices":
+      - /url: ../content/Invoices.aspx
+  - listitem:
+    - link "Invoices New":
+      - /url: ../content/InvoicesNew.aspx
+  - listitem:
+    - link "Reconciliation":
+      - /url: ../content/reconReport.aspx
+  - listitem:
+    - link "On Demand Reports":
+      - /url: ../content/Reports.aspx
+  - listitem:
+    - link "Value Calculator":
+      - /url: ../content/ValueCalculator.aspx
+  - listitem:
+    - link "Admin":
+      - /url: admin.aspx
+  - listitem:
+    - link "Logout":
+      - /url: ../content/logout.aspx
+  - listitem:
+    - link "Help":
+      - /url: "#hide1"
+- heading "Admin Tools" [level=1]
+- paragraph: Using the administrator functions you can manage users, hospitals, suppliers, contact information, and terms.
+- list:
+  - listitem:
+    - link "[BAI Exclusion Manager]":
+      - /url: BAIException_search.aspx
+    - text: Manage BAI Exclusions
+  - listitem:
+    - link "[Bank Manager]":
+      - /url: bank_search.aspx
+    - text: Manage Banks
+  - listitem:
+    - link "[Blackout Manager]:":
+      - /url: blackout_search.aspx
+    - text: Manage blackout dates.
+  - listitem:
+    - link "[Facility Manager]:":
+      - /url: facility_search.aspx
+    - text: Manage facilities.
+  - listitem:
+    - link "[GHX ePay Settings]:":
+      - /url: setting_search.aspx
+    - text: Manage GHX ePay routing number, account number, and ACH settings.
+  - listitem:
+    - link "[Hospital Manager]:":
+      - /url: hospital_search.aspx
+    - text: Manage hospital information, view terms and contacts.
+  - listitem:
+    - link "[Hospital Schedule Manager]:":
+      - /url: hospitalschedule_search.aspx
+    - text: Manage hospital schedules.
+  - listitem:
+    - link "[Maintenance Banner]:":
+      - /url: BannerList.aspx
+    - text: Manage maintenance banner.
+  - listitem:
+    - link "[Term Manager]:":
+      - /url: TermManagerSearch.aspx
+    - text: Update or end multiple terms.
+  - listitem:
+    - link "[Opportunity Manager]:":
+      - /url: VendorManagement.aspx
+    - text: Manage Opportunites.
+  - listitem:
+    - link "[Override Reason Manager]:":
+      - /url: overridereason_search.aspx
+    - text: Manage reasons for users to manually override the past due terms.
+  - listitem:
+    - link "[Process Manager]":
+      - /url: process_search.aspx
+    - text: ": Run calculation process for current pending transactions, and view exception records."
+  - listitem:
+    - link "[QBR Exceptions]:":
+      - /url: QBRExceptions.aspx
+    - text: Manage QBR Exceptions.
+  - listitem:
+    - link "[Reconciliation]:":
+      - /url: reconHome.aspx
+    - text: Reconciliation.
+  - listitem:
+    - link "[Self-Enrollment Manager]:":
+      - /url: seManager.aspx
+    - text: Manage the enrollment process.
+  - listitem:
+    - link "[Statement Date Manager]:":
+      - /url: statementdate_search.aspx
+    - text: Manager hospital and supplier statement dates.
+  - listitem:
+    - link "[Settlement Schedule Manager]":
+      - /url: settlementschedule_search.aspx
+    - text: Manage Settlement Schedules
+  - listitem:
+    - link "[Supplier Contract Manager]:":
+      - /url: LiborManager.aspx
+    - text: Manage Supplier Contracts.
+  - listitem:
+    - link "[Supplier Manager]:":
+      - /url: supplier_search.aspx
+    - text: Manage supplier information, view terms and contacts.
+  - listitem:
+    - link "[Supplier Alias Manager]:":
+      - /url: supplieralias_search.aspx
+    - text: Manage supplier alias information.
+  - listitem:
+    - link "[Supplier CC Notify]:":
+      - /url: supplier_notify.aspx
+    - text: Manage supplier credit card change notifications.
+  - listitem:
+    - link "[Super Grid]:":
+      - /url: SuperGrid.aspx
+    - text: Super Grid.
+  - listitem:
+    - link "[Transaction Summary]:":
+      - /url: transaction_search.aspx
+    - text: View transaction summary.
+  - listitem:
+    - link "[User & Contact Manager]:":
+      - /url: users_search.aspx
+    - text: Manage user information and reset passwords.
+  - listitem:
+    - link "[Email Templates]:":
+      - /url: MailTemplateList.aspx
+    - text: Manage email templates.
+- list:
+  - listitem: Â©2025 Global Healthcare Exchange, LLC. All rights reserved.
+  - listitem: "|"
+  - listitem:
+    - link "Terms Of Use":
+      - /url: https://epay.ghx.com/documents/epay-site-terms-of-use.pdf
+  - listitem: "|"
+  - listitem:
+    - link "Privacy Policy":
+      - /url: https://epay.ghx.com/documents/epay-site-privacy-policy.pdf
+  - listitem: "|"
+```
