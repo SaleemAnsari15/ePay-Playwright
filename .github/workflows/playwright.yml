@@ -31,9 +31,6 @@ jobs:
       - name: 🛠 Install Allure Commandline
         run: npm install -g allure-commandline --save-dev
 
-      - name: 🧹 Clean previous Allure results
-        run: rm -rf allure-results
-
       - name: ✅ Run Playwright tests with .env.tabint
         run: |
           export ENV_FILE="environments/.env.tabint" npx playwright test
