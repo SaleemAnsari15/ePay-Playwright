@@ -25,14 +25,20 @@ jobs:
       - name: 🎭 Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests with custom env file
-        run: ENV_FILE="environments/.env.tabint" npx playwright test
-      
-      - name: Run Playwright tests with custom env file
-        run: ENV_FILE="environments/.env.dev" npx playwright test
+      - name: 🧰 Install dotenv-cli
+        run: npm install --save-dev dotenv-cli
 
-      - name: Run Playwright tests with custom env file
-        run: ENV_FILE="environments/.env.demo" npx playwright test
+      - name: 🧹 Clean previous Allure results
+        run: rm -rf allure-results
+
+      - name: ✅ Run Playwright tests with .env.tabint
+        run: npx dotenv -e environments/.env.tabint -- npx playwright test
+
+      - name: ✅ Run Playwright tests with .env.dev
+        run: npx dotenv -e environments/.env.dev -- npx playwright test
+
+      - name: ✅ Run Playwright tests with .env.demo
+        run: npx dotenv -e environments/.env.demo -- npx playwright test
 
       - name: 🧪 Generate Allure Report
         run: |
