@@ -26,7 +26,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: 🚀 Run Playwright Tests
-        run: npx playwright test
+        run: $env:ENV_FILE="environments/.env.tabint"; npx playwright test
 
       - name: 🧪 Generate Allure Report
         run: |
