@@ -34,9 +34,6 @@ jobs:
       - name: ✅ Run Playwright tests with .env.tabint
         run: npx dotenv -e environments/.env.tabint -- npx playwright test
 
-      - name: ✅ Run Playwright tests with .env.dev
-        run: $env:ENV_FILE="environments/.env.tabint"; npx playwright test
-
       - name: 📤 Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
