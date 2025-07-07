@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","5666","Epay login","webkit","Mon Jul 07 14:24:36 UTC 2025","passed","Mon Jul 07 14:24:42 UTC 2025","","VerifyLogin.spec.js","",""
-"","3603","Epay login","firefox","Mon Jul 07 14:24:31 UTC 2025","passed","Mon Jul 07 14:24:34 UTC 2025","","VerifyLogin.spec.js","",""
-"","16046","Epay login","chromium","Mon Jul 07 14:24:10 UTC 2025","passed","Mon Jul 07 14:24:26 UTC 2025","","VerifyLogin.spec.js","",""
