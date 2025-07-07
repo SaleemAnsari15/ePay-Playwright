@@ -28,11 +28,18 @@ jobs:
       - name: 🧰 Install dotenv-cli
         run: npm install --save-dev dotenv-cli
 
+      - name: 🛠 Install Allure Commandline
+        run: npm install -g allure-commandline --save-dev
+
       - name: 🧹 Clean previous Allure results
         run: rm -rf allure-results
 
       - name: ✅ Run Playwright tests with .env.tabint
-        run: npx dotenv -e environments/.env.tabint -- npx playwright test
+        run: |
+          export ENV_FILE="environments/.env.tabint" npx playwright test
+
+      - name: 📊 Generate Allure Report
+        run: npx allure generate ./allure-results --clean -o ./allure-report
 
       - name: 📤 Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
