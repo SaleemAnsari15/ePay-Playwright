@@ -8,4 +8,5 @@ test('Epay login', async ({ page }) => {
   await loginPage.verifyLoginSuccess();
   await loginPage.navigateToAdminManager();
   await loginPage.navigateToUserContactManager();
+  
 });
