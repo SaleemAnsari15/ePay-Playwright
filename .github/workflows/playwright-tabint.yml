@@ -1,44 +1,52 @@
-name: Playwright - Tabint Environment
+name: Playwright Tests in Tab-int Environment
 
 on:
-  workflow_dispatch:
   push:
     branches: [main]
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    env:
-      ENV_FILE: environments/.env.tabint
 
     steps:
-      - name: Checkout code
+      - name: 🛎️ Checkout Code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: 🧰 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: 📦 Install Dependencies
         run: npm ci
 
-      - name: Install browsers
+      - name: 🎭 Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Install dotenv and allure
+      - name: 🧰 Install dotenv-cli
+        run: npm install --save-dev dotenv-cli
+
+      - name: 🛠 Install Allure Commandline
+        run: npm install -g allure-commandline --save-dev
+
+      - name: ✅ Run Playwright tests with .env.tabint
         run: |
-          npm install --save-dev dotenv-cli
-          npm install -g allure-commandline
+          export ENV_FILE="environments/.env.tabint" npx playwright test
 
-      - name: Run tests
-        run: npx dotenv -e $ENV_FILE -- npx playwright test
-
-      - name: Generate Allure Report
+      - name: 📊 Generate Allure Report
         run: npx allure generate ./allure-results --clean -o ./allure-report
 
-      - name: Upload Allure Report
+      - name: 📤 Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          publish_branch: gh-pages
+
+      - name: 📦 Upload Allure Report as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report-tabint
+          name: allure-report
           path: ./allure-report
